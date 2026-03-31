@@ -85,8 +85,6 @@ Dataset_texts : [Download](https://drive.google.com/drive/folders/1roimV1VWSof25
 # Clone the repository
 git clone https://github.com/your-username/image-captioning-deep-learning.git
 
-# Navigate to project folder
-cd image-captioning-deep-learning
 
 # Install dependencies
 pip install -r requirements.txt
@@ -97,11 +95,6 @@ python src/train.py
 
 ---
 
-## 📸 Sample Output
-
-*(Add sample predictions here if available)*
-
----
 
 ## 📌 Future Improvements
 
