@@ -32,7 +32,7 @@ The model uses a **CNN encoder (Xception)** to extract visual features and an **
 ## 📂 Dataset
 
 * **Flickr8k Dataset**
-Dataset_images : [Download Images] https://drive.google.com/drive/folders/1l0qNqT6H_0uhlWf3Sd9wekuh-s96srea?usp=sharing
+Dataset_images : [Download Images](https://drive.google.com/drive/folders/1l0qNqT6H_0uhlWf3Sd9wekuh-s96srea?usp=sharing)
 Dataset_texts : https://drive.google.com/drive/folders/1roimV1VWSof25wGKCz0mudVdV_QbIR3i?usp=sharing
   * ~8,000 images
   * Each image has 5 captions
