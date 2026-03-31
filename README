@@ -9,25 +9,60 @@ The model uses a **CNN encoder (Xception)** to extract visual features and an **
 ---
 
 ## 🧠 Model Architecture
-   Model : [Download](https://drive.google.com/drive/folders/1wpslb-1op4aooTUBozwYahaWqZWfEdJG?usp=sharing)
 
-* **Encoder (Vision Model):**
-
-  * Pretrained Xception model (without top layer)
-  * Extracts a 2048-dimensional feature vector from images
-  * Fully connected layer reduces dimensionality to 256
-
-* **Decoder (Language Model):**
-
-  * Embedding layer for text representation
-  * LSTM network for sequence generation
-  * Dense layers for word prediction
-
-* **Fusion:**
-
-  * Combines image features and text features using element-wise addition
+The model follows an **Encoder–Decoder architecture** combining Computer Vision and NLP.
 
 ---
+
+### 🔹 Image Encoder (CNN)
+
+- Pretrained **Xception model** (without top layer)
+- Extracts a **2048-dimensional feature vector**
+- Feature processing:
+  - Dropout layer
+  - Dense layer (2048 → 256)
+
+---
+
+### 🔹 Text Decoder (LSTM)
+
+- Input: tokenized caption sequences (max length = 34)
+- Embedding layer:
+  - Converts words into **256-dimensional vectors**
+- Dropout layer for regularization
+- LSTM layer:
+  - Learns sequential dependencies
+  - Outputs a **256-dimensional context vector**
+
+---
+
+### 🔹 Feature Fusion
+
+- Combines image features and text features using:
+  - **Element-wise addition (`Add` layer)**
+- Followed by:
+  - Dense layer (256 units, ReLU)
+
+---
+
+### 🔹 Output Layer
+
+- Final Dense layer with **Softmax activation**
+- Output size = vocabulary size (~7577 words)
+- Predicts the **next word in the sequence**
+
+---
+
+### 📊 Model Summary
+
+- Dual-input model:
+  - Image features → shape `(None, 2048)`
+  - Text sequence → shape `(None, 34)`
+- Output:
+  - Probability distribution over vocabulary
+
+---
+
 
 ## 📂 Dataset
 
