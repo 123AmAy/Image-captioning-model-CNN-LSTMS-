@@ -83,17 +83,18 @@ Dataset_texts : [Download](https://drive.google.com/drive/folders/1roimV1VWSof25
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/image-captioning-deep-learning.git
+git clone https://github.com/123AmAy/Image-captioning-model-CNN-LSTMS-/tree/main
 
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Train the model
-python src/train.py
+# To Train the model
+   Run the 3_train.py
 ```
 
----
+# To Test the model
+   Run the test.py
 
 
 ## 📌 Future Improvements
