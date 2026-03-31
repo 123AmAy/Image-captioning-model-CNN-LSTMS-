@@ -1,0 +1,122 @@
+# 🚀 Image Captioning using Deep Learning
+
+## 📌 Overview
+
+This project implements an **end-to-end Image Captioning system** that generates natural language descriptions for images by combining **Computer Vision and Natural Language Processing** techniques.
+
+The model uses a **CNN encoder (Xception)** to extract visual features and an **LSTM-based decoder** to generate captions word-by-word.
+
+---
+
+## 🧠 Model Architecture
+
+* **Encoder (Vision Model):**
+
+  * Pretrained Xception model (without top layer)
+  * Extracts a 2048-dimensional feature vector from images
+  * Fully connected layer reduces dimensionality to 256
+
+* **Decoder (Language Model):**
+
+  * Embedding layer for text representation
+  * LSTM network for sequence generation
+  * Dense layers for word prediction
+
+* **Fusion:**
+
+  * Combines image features and text features using element-wise addition
+
+---
+
+## 📂 Dataset
+
+* **Flickr8k Dataset**
+
+  * ~8,000 images
+  * Each image has 5 captions
+
+---
+
+## ⚙️ Features Implemented
+
+* Image feature extraction using pretrained CNN (Xception)
+* Text preprocessing:
+
+  * Lowercasing, punctuation removal
+  * Tokenization and vocabulary creation
+  * Sequence padding
+* Special tokens: `<start>` and `<end>`
+* Custom **data generator using tf.data** for efficient training
+* Model training with:
+
+  * Categorical Cross-Entropy Loss
+  * Adam Optimizer
+  * Learning Rate Scheduling
+  * Early Stopping
+
+---
+
+## 🏋️ Training Details
+
+* **Loss Function:** Categorical Crossentropy
+* **Optimizer:** Adam
+* **Batch Size:** 32
+* **Epochs:** 300
+* **Feature Vector Size:** 2048 → 256
+
+---
+
+## 🛠 Tech Stack
+
+* Python
+* TensorFlow / Keras
+* NumPy
+* Pillow
+* Matplotlib
+
+---
+
+## ▶️ How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/image-captioning-deep-learning.git
+
+# Navigate to project folder
+cd image-captioning-deep-learning
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Train the model
+python src/train.py
+```
+
+---
+
+## 📸 Sample Output
+
+*(Add sample predictions here if available)*
+
+---
+
+## 📌 Future Improvements
+
+* Implement **Beam Search** for better caption generation
+* Add **BLEU Score evaluation** for performance measurement
+* Integrate **Attention Mechanism** for improved context understanding
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+---
+
+## 📧 Contact
+
+Ayush Aman
+Interested in Machine Learning, Deep Learning, and Software Development
+
+---
